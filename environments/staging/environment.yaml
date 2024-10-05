@@ -1,0 +1,42 @@
+#
+# Configuration for staging environment
+#
+version: 1.0
+app:
+  # build id to deploy. if 'version' is commented out, the application is not deployed
+  version: ""
+ 
+  # MQ service
+  services:
+    - type: mqcloud
+      name: MQ-c3-mei-dev
+ 
+  # number of instances
+  instances:
+    # min number of instances. can be 0 for scale to 0. default to 1.
+    min: 1
+    
+    # max number of instances. defaults to 1 if min == 0, otherwise defaults to min
+    max: 1
+    
+  resources:
+    # max cpu. memory limit is based on cpu value: 1:3 memory ratio, e.g. 1 cpu == 4 gb
+    cpu: 1
+
+  # List of environment variables that are set for the application
+  env:
+    - name: JVM_ARGS 
+      value: "-Xms=1024m"
+    - name: WLP_LOGGING_CONSOLE_FORMAT
+      value: DEV  
+
+  # List of variables that can be referenced in the server.xml
+  variables:
+    - name: mqManagerName
+      value: "meiQueMgr"
+    - name: mqHostName  
+      value: "meiquemgr-9906.qm.us-south.mq.appdomain.cloud"
+    - name: mqPort
+      value: "30714"
+    - name: mqAppUserName
+      value: "easemquser1"  
