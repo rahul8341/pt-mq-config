@@ -24,13 +24,14 @@ app:
     cpu: 1
 
   # List of environment variables that are set for the application
+  #- name: com.ibm.mq.cfg.jmqi.useMQCSPauthentication
+  #    value: "true"
   env:
     - name: JVM_ARGS 
       value: "-Xms=1024m"
     - name: WLP_LOGGING_CONSOLE_FORMAT
       value: DEV  
-    - name: com.ibm.mq.cfg.jmqi.useMQCSPauthentication
-      value: "true"
+    
 
   # List of variables that can be referenced in the server.xml
   variables:
