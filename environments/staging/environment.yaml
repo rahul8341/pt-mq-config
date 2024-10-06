@@ -4,7 +4,7 @@
 version: 1.0
 app:
   # build id to deploy. if 'version' is commented out, the application is not deployed
-  version: "c9e966d3-21f8-461a-a2b2-03b853759eb9"
+  version: "23dd8bb8-7836-42b1-a31d-bc7f16a94b8c"
  
   # MQ service
   services:
@@ -24,8 +24,6 @@ app:
     cpu: 1
 
   # List of environment variables that are set for the application
-  #- name: com.ibm.mq.cfg.jmqi.useMQCSPauthentication
-  #    value: "true"
   env:
     - name: JVM_ARGS 
       value: "-Xms=1024m"
