@@ -27,8 +27,6 @@ app:
   env:
     - name: JVM_ARGS 
       value: "-Xms=1024m"
-    - name: WLP_LOGGING_CONSOLE_FORMAT
-      value: DEV  
     
 
   # List of variables that can be referenced in the server.xml
