@@ -5,7 +5,12 @@ version: 1.0
 app:
   # build id to deploy. if 'version' is commented out, the application is not deployed
   version: ""
-  
+
+  # MQ service
+  services:
+    - type: mqcloud
+      name: MQ-c3-mei-dev
+      
   # number of instances
   instances:
     # min number of instances. can be 0 for scale to 0. default to 1.
@@ -25,3 +30,11 @@ app:
 
   # List of variables that can be referenced in the server.xml
   variables: 
+    - name: mqManagerName
+      value: "meiQueMgr"
+    - name: mqHostName  
+      value: "meiquemgr-9906.qm.us-south.mq.appdomain.cloud"
+    - name: mqPort
+      value: "30714"
+    - name: mqAppUserName
+      value: "easemquser1"  
