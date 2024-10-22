@@ -7,9 +7,12 @@ app:
   version: "a16eac24-f110-432e-bdac-0302ef9b5036"
  
   # MQ service
-  services:
-    - type: mqcloud
-      name: MQ-c3-mei-dev
+  # Note: "services" variable here is used to initiate private connection gateway between EASe Java and MQ
+  # when both servcies are at private endpoints. But currently for pen test, we're using MQ public endpoint (see mqHostName value below), 
+  # therefore, this "services" variable has no effect.
+  #services:
+  #  - type: mqcloud
+  #    name: MQ-c3-mei-dev
  
   # number of instances
   instances:
