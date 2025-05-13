@@ -13,7 +13,12 @@ app:
   #services:
   #  - type: mqcloud
   #    name: MQ-c3-mei-dev
-      
+
+  # Enable a public endpoint for the application. If not set, the application
+  # is only available on an internal endpoint accessible to other applications
+  # within a subscription.
+  endpoints: public
+  
   # number of instances
   instances:
     # min number of instances. can be 0 for scale to 0. default to 1.
