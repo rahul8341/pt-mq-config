@@ -13,7 +13,11 @@ app:
   #services:
   #  - type: mqcloud
   #    name: MQ-c3-mei-dev
-
+  
+  # Using SVT's MQ instance for private connection from EASe Java application to MQ
+  services:
+    - crn: "crn:v1:bluemix:public:mqcloud:us-east:a/67165156f10340b4a16f9a90b4d63e27:b56d491e-89d0-40a4-9530-2a134356d25c::"
+    
   # Enable a public endpoint for the application. If not set, the application
   # is only available on an internal endpoint accessible to other applications
   # within a subscription.
@@ -40,10 +44,10 @@ app:
   # List of variables that can be referenced in the server.xml
   variables:
     - name: mqManagerName
-      value: "meiQueMgr"
+      value: "QM1"
     - name: mqHostName  
-      value: "meiquemgr-9906.qm.us-south.mq.appdomain.cloud"
+      value: "qm1-0783.qmb56d.private.us-east.mq2.appdomain.cloud"
     - name: mqPort
-      value: "32439"
+      value: "443"
     - name: mqAppUserName
-      value: "easemquser1"  
+      value: "easemquser1"   
