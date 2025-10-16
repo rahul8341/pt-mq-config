@@ -5,7 +5,8 @@ version: 1.0
 app:
   # build id to deploy. if 'version' is commented out, the application is not deployed
   version: ""
- 
+  services:
+    - awsEndpointService: com.amazonaws.vpce.us-east-1.vpce-svc-038584aa8a44934a3 
   # MQ service
   # Note: "services" variable here is used to initiate private connection gateway between EASe Java and MQ
   # when both servcies are at private endpoints. But currently for pen test, we're using MQ public endpoint (see mqHostName value below), 
